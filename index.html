@@ -1,0 +1,2284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jayaraj S | Technology Leader</title>
+
+    <meta name="description"
+          content="Jayaraj S Jaykar — Technology Leader, AI/ML Builder and Entrepreneur. Building technology, leading teams and creating impact.">
+
+    <meta name="author" content="Jayaraj S Jaykar">
+
+    <meta property="og:title" content="Jayaraj S Jaykar | Technology Leader">
+    <meta property="og:description"
+          content="Technology Leader • AI/ML Builder • Entrepreneur">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #050505;
+            color: #f5f5f5;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        ::selection {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* =========================================================
+           VARIABLES
+        ========================================================= */
+
+        :root {
+            --bg: #050505;
+            --bg-soft: #0b0b0b;
+            --card: rgba(255,255,255,0.045);
+            --border: rgba(255,255,255,0.11);
+            --text: #f5f5f5;
+            --muted: #9b9b9b;
+            --white: #ffffff;
+            --accent: #ffffff;
+            --max: 1180px;
+        }
+
+        /* =========================================================
+           BACKGROUND
+        ========================================================= */
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -3;
+
+            background:
+                radial-gradient(
+                    circle at 15% 15%,
+                    rgba(255,255,255,0.07),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 85% 35%,
+                    rgba(255,255,255,0.045),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 50% 90%,
+                    rgba(255,255,255,0.035),
+                    transparent 30%
+                );
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -2;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                );
+
+            background-size: 55px 55px;
+
+            mask-image: linear-gradient(
+                to bottom,
+                black,
+                transparent 85%
+            );
+        }
+
+        /* =========================================================
+           CONTAINER
+        ========================================================= */
+
+        .container {
+            width: min(var(--max), 90%);
+            margin: auto;
+        }
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(5,5,5,0.72);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            border-bottom: 1px solid transparent;
+
+            transition: 0.3s ease;
+        }
+
+        header.scrolled {
+            border-bottom-color: var(--border);
+        }
+
+        .nav {
+            height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.03em;
+        }
+
+        .logo span {
+            opacity: 0.45;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #aaa;
+            font-size: 0.9rem;
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-button {
+            border: 1px solid var(--border);
+            padding: 10px 17px;
+            border-radius: 999px;
+            color: #fff !important;
+        }
+
+        .nav-button:hover {
+            background: #fff;
+            color: #000 !important;
+        }
+
+        .menu-btn {
+            display: none;
+
+            border: 1px solid var(--border);
+            background: transparent;
+            color: #fff;
+
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 100px;
+
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.035);
+
+            padding: 8px 13px;
+            border-radius: 999px;
+
+            font-size: 0.75rem;
+            color: #bdbdbd;
+
+            margin-bottom: 25px;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #fff;
+
+            box-shadow: 0 0 12px #fff;
+        }
+
+        .hero h1 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(4rem, 9vw, 8.5rem);
+
+            line-height: 0.88;
+            letter-spacing: -0.075em;
+
+            max-width: 950px;
+        }
+
+        .hero h1 .outline {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255,0.55);
+        }
+
+        .hero-subtitle {
+            margin-top: 28px;
+
+            color: #aaa;
+
+            font-size: clamp(1rem, 2vw, 1.25rem);
+
+            max-width: 650px;
+        }
+
+        .typing {
+            color: #fff;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+
+            margin-top: 35px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+
+            padding: 14px 20px;
+
+            border-radius: 999px;
+
+            border: 1px solid var(--border);
+
+            font-size: 0.9rem;
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255,255,255,0.12);
+        }
+
+        .btn-secondary {
+            color: #fff;
+            background: rgba(255,255,255,0.03);
+        }
+
+        .btn-secondary:hover {
+            background: #fff;
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 35px;
+            left: 0;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #777;
+            font-size: 0.75rem;
+        }
+
+        .scroll-line {
+            width: 45px;
+            height: 1px;
+            background: #777;
+        }
+
+        /* =========================================================
+           SECTION
+        ========================================================= */
+
+        section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .section-heading {
+            margin-bottom: 55px;
+        }
+
+        .section-number {
+            color: #666;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.12em;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(2.6rem, 6vw, 5rem);
+
+            letter-spacing: -0.065em;
+            line-height: 0.95;
+        }
+
+        .section-heading p {
+            margin-top: 18px;
+            max-width: 650px;
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-text {
+            font-size: clamp(1.4rem, 3vw, 2.3rem);
+            line-height: 1.25;
+            letter-spacing: -0.04em;
+        }
+
+        .about-text strong {
+            color: #fff;
+        }
+
+        .about-text span {
+            color: #666;
+        }
+
+        .about-card {
+            border: 1px solid var(--border);
+            background: var(--card);
+
+            border-radius: 24px;
+            padding: 30px;
+
+            backdrop-filter: blur(12px);
+        }
+
+        .about-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .about-card p {
+            color: #999;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .about-list li {
+            padding: 13px 0;
+            border-bottom: 1px solid var(--border);
+
+            display: flex;
+            justify-content: space-between;
+
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .about-list li strong {
+            color: #fff;
+        }
+
+        /* =========================================================
+           STATS
+        ========================================================= */
+
+        .stats {
+            margin-top: 70px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stat {
+            padding: 30px 20px;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 3rem;
+            letter-spacing: -0.06em;
+        }
+
+        .stat-label {
+            color: #777;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        /* =========================================================
+           LEADERSHIP
+        ========================================================= */
+
+        .leadership-card {
+            position: relative;
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+            border-radius: 32px;
+
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(255,255,255,0.08),
+                    transparent 35%
+                ),
+                rgba(255,255,255,0.025);
+
+            padding: clamp(30px, 6vw, 70px);
+        }
+
+        .leadership-card::before {
+            content: "LEAD";
+
+            position: absolute;
+            right: -25px;
+            bottom: -45px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 13rem;
+            font-weight: 700;
+
+            color: rgba(255,255,255,0.025);
+
+            pointer-events: none;
+        }
+
+        .role-tag {
+            display: inline-block;
+
+            padding: 8px 12px;
+
+            border-radius: 999px;
+
+            border: 1px solid var(--border);
+
+            color: #aaa;
+
+            font-size: 0.75rem;
+            margin-bottom: 22px;
+        }
+
+        .leadership-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(2.4rem, 6vw, 5.5rem);
+
+            letter-spacing: -0.065em;
+            line-height: 0.95;
+        }
+
+        .leadership-card h3 span {
+            color: #666;
+        }
+
+        .leadership-card p {
+            max-width: 700px;
+
+            color: #999;
+
+            margin-top: 25px;
+        }
+
+        .leadership-points {
+            margin-top: 40px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .leadership-point {
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.025);
+
+            padding: 22px;
+            border-radius: 18px;
+        }
+
+        .leadership-point strong {
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        .leadership-point span {
+            color: #777;
+            font-size: 0.82rem;
+        }
+
+        /* =========================================================
+           PROJECTS
+        ========================================================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .project-card {
+            position: relative;
+
+            border: 1px solid var(--border);
+            border-radius: 25px;
+
+            padding: 30px;
+
+            background: var(--card);
+
+            min-height: 310px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            overflow: hidden;
+
+            transition: 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        .project-card::after {
+            content: "↗";
+
+            position: absolute;
+            right: 25px;
+            top: 20px;
+
+            font-size: 1.5rem;
+
+            color: #777;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover::after {
+            color: #fff;
+            transform: translate(4px,-4px);
+        }
+
+        .project-number {
+            color: #555;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+        }
+
+        .project-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 2rem;
+
+            letter-spacing: -0.04em;
+            margin-top: 35px;
+        }
+
+        .project-card p {
+            color: #888;
+            margin-top: 12px;
+            max-width: 500px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 22px;
+        }
+
+        .tag {
+            border: 1px solid var(--border);
+            padding: 6px 10px;
+            border-radius: 999px;
+
+            color: #888;
+            font-size: 0.7rem;
+        }
+
+        /* =========================================================
+           SKILLS
+        ========================================================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .skill {
+            border: 1px solid var(--border);
+            background: var(--card);
+
+            border-radius: 20px;
+            padding: 25px;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.07);
+        }
+
+        .skill-icon {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .skill h3 {
+            font-family: "Space Grotesk", sans-serif;
+            margin-bottom: 7px;
+        }
+
+        .skill p {
+            color: #777;
+            font-size: 0.85rem;
+        }
+
+        /* =========================================================
+           VISION
+        ========================================================= */
+
+        .vision {
+            text-align: center;
+            padding: 150px 0;
+        }
+
+        .vision h2 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(3rem, 8vw, 7.5rem);
+
+            line-height: 0.9;
+            letter-spacing: -0.075em;
+        }
+
+        .vision h2 span {
+            color: transparent;
+            -webkit-text-stroke: 1px #666;
+        }
+
+        .vision p {
+            max-width: 600px;
+            margin: 30px auto 0;
+            color: #888;
+        }
+
+        /* =========================================================
+           GITHUB CTA
+        ========================================================= */
+
+        .github-box {
+            border: 1px solid var(--border);
+
+            border-radius: 30px;
+
+            padding: clamp(30px, 6vw, 65px);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 30px;
+
+            background:
+                radial-gradient(
+                    circle at 90% 50%,
+                    rgba(255,255,255,0.07),
+                    transparent 40%
+                ),
+                var(--card);
+        }
+
+        .github-box h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            letter-spacing: -0.06em;
+        }
+
+        .github-box p {
+            color: #777;
+            margin-top: 10px;
+        }
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(3rem, 8vw, 8rem);
+
+            letter-spacing: -0.075em;
+            line-height: 0.9;
+        }
+
+        .contact h2 span {
+            color: #666;
+        }
+
+        .contact p {
+            color: #888;
+            max-width: 600px;
+            margin: 25px auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 30px 0;
+
+            color: #666;
+            font-size: 0.75rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 18px;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        /* =========================================================
+           REVEAL ANIMATION
+        ========================================================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================================
+           CURSOR GLOW
+        ========================================================= */
+
+        .cursor-glow {
+            position: fixed;
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            background: radial-gradient(
+                circle,
+                rgba(255,255,255,0.055),
+                transparent 65%
+            );
+
+            pointer-events: none;
+
+            transform: translate(-50%, -50%);
+
+            z-index: -1;
+
+            transition: left 0.12s ease, top 0.12s ease;
+        }
+
+        /* =========================================================
+           BACK TO TOP
+        ========================================================= */
+
+        #topBtn {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+
+            border: 1px solid var(--border);
+
+            background: rgba(10,10,10,0.8);
+            color: #fff;
+
+            cursor: pointer;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: 0.3s;
+
+            z-index: 900;
+        }
+
+        #topBtn.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #topBtn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                position: fixed;
+
+                top: 78px;
+                left: 5%;
+                right: 5%;
+
+                padding: 20px;
+
+                border: 1px solid var(--border);
+                border-radius: 20px;
+
+                background: rgba(10,10,10,0.96);
+
+                flex-direction: column;
+                align-items: stretch;
+
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+
+                transition: 0.3s;
+            }
+
+            .nav-links.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .nav-links a {
+                padding: 10px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat:nth-child(2) {
+                border-right: none;
+            }
+
+            .stat:nth-child(3),
+            .stat:nth-child(4) {
+                border-top: 1px solid var(--border);
+            }
+
+            .leadership-points {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .github-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 85px 0;
+            }
+
+            .hero h1 {
+                font-size: clamp(3.5rem, 17vw, 6rem);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat-number {
+                font-size: 2.2rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-scroll {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         CURSOR
+    ========================================================== -->
+
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================== -->
+
+    <header id="header">
+
+        <div class="container nav">
+
+            <a href="#home" class="logo">
+                JAYARAJ<span>.S</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="#about">About</a>
+                <a href="#leadership">Leadership</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Capabilities</a>
+                <a href="#vision">Vision</a>
+                <a href="#contact" class="nav-button">Let's Connect</a>
+
+            </nav>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container">
+
+                <div class="hero-content reveal">
+
+                    <div class="eyebrow">
+                        <span class="status-dot"></span>
+                        Building • Leading • Creating Impact
+                    </div>
+
+                    <h1>
+                        JAYARAJ
+                        <br>
+                        <span class="outline">S</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+
+                        <strong>Technology Leader</strong>
+                        ·
+                        <span class="typing" id="typing"></span>
+                        · Entrepreneur
+
+                        <br><br>
+
+                        I build technology-driven solutions,
+                        lead ambitious teams, and turn ideas
+                        into meaningful real-world outcomes.
+
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#projects" class="btn btn-primary">
+                            Explore My Work →
+                        </a>
+
+                        <a href="#leadership" class="btn btn-secondary">
+                            Leadership
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-scroll">
+                    <span class="scroll-line"></span>
+                    SCROLL TO EXPLORE
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+
+        <section id="about">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div class="section-number">01 — ABOUT</div>
+
+                    <h2>
+                        Built to lead.<br>
+                        Driven to build.
+                    </h2>
+
+                    <p>
+                        Technology is more than code.
+                        It is a tool for solving problems,
+                        empowering people and creating impact.
+                    </p>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-text reveal">
+
+                        I combine
+                        <strong>technology, leadership</strong>
+                        and
+                        <strong>entrepreneurial thinking</strong>
+                        to transform ideas into solutions.
+
+                        <br><br>
+
+                        <span>
+                            From building software and AI-powered
+                            concepts to coordinating teams and
+                            executing ambitious initiatives,
+                            I focus on turning vision into action.
+                        </span>
+
+                    </div>
+
+
+                    <div class="about-card reveal">
+
+                        <h3>My Approach</h3>
+
+                        <p>
+                            Think strategically. Build intelligently.
+                            Lead with purpose. Execute relentlessly.
+                        </p>
+
+                        <ul class="about-list">
+
+                            <li>
+                                <span>Mindset</span>
+                                <strong>Builder</strong>
+                            </li>
+
+                            <li>
+                                <span>Focus</span>
+                                <strong>Innovation</strong>
+                            </li>
+
+                            <li>
+                                <span>Leadership</span>
+                                <strong>Team First</strong>
+                            </li>
+
+                            <li>
+                                <span>Execution</span>
+                                <strong>Impact</strong>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stats reveal">
+
+                    <div class="stat">
+
+                        <div class="stat-number"
+                             data-target="9">
+                            0
+                        </div>
+
+                        <div class="stat-label">
+                            GitHub Repositories
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number"
+                             data-target="6">
+                            0
+                        </div>
+
+                        <div class="stat-label">
+                            Featured Projects
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            ∞
+                        </div>
+
+                        <div class="stat-label">
+                            Ideas to Build
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            01
+                        </div>
+
+                        <div class="stat-label">
+                            Mission — Create Impact
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LEADERSHIP
+        ====================================================== -->
+
+        <section id="leadership">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div class="section-number">
+                        02 — LEADERSHIP
+                    </div>
+
+                    <h2>
+                        Leadership<br>
+                        in action.
+                    </h2>
+
+                </div>
+
+
+                <div class="leadership-card reveal">
+
+                    <span class="role-tag">
+                        PRESIDENT · ALGORITHM AVENGERS
+                    </span>
+
+                    <h3>
+                        Lead the team.<br>
+                        <span>Build the vision.</span>
+                    </h3>
+
+                    <p>
+                        As President of Algorithm Avengers,
+                        I focus on bringing people, ideas and
+                        execution together — transforming
+                        ambitious concepts into coordinated
+                        action.
+                    </p>
+
+
+                    <div class="leadership-points">
+
+                        <div class="leadership-point">
+
+                            <strong>Strategy</strong>
+
+                            <span>
+                                Turning goals into clear,
+                                executable direction.
+                            </span>
+
+                        </div>
+
+
+                        <div class="leadership-point">
+
+                            <strong>Team Leadership</strong>
+
+                            <span>
+                                Creating collaboration,
+                                ownership and momentum.
+                            </span>
+
+                        </div>
+
+
+                        <div class="leadership-point">
+
+                            <strong>Execution</strong>
+
+                            <span>
+                                Moving from concept to
+                                measurable outcomes.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <br><br>
+
+                    <a
+                        href="https://algorithm-avengers-web.github.io/NEC/"
+                        target="_blank"
+                        class="btn btn-secondary"
+                    >
+                        Explore Algorithm Avengers →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROJECTS
+        ====================================================== -->
+
+        <section id="projects">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div class="section-number">
+                        03 — SELECTED WORK
+                    </div>
+
+                    <h2>
+                        Ideas made<br>
+                        tangible.
+                    </h2>
+
+                    <p>
+                        A selection of technology projects,
+                        experiments and products built with
+                        a focus on practical problem solving.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <a
+                        class="project-card reveal"
+                        href="https://jayarajsjaykar.github.io/motocall/"
+                        target="_blank"
+                    >
+
+                        <div>
+
+                            <div class="project-number">
+                                01 / PRODUCT
+                            </div>
+
+                            <h3>Motocall</h3>
+
+                            <p>
+                                A web-based project focused on
+                                creating a practical digital
+                                experience around mobility.
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">HTML</span>
+                                <span class="tag">Web</span>
+                                <span class="tag">Product</span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        class="project-card reveal"
+                        href="https://jayarajsjaykar.github.io/stock/"
+                        target="_blank"
+                    >
+
+                        <div>
+
+                            <div class="project-number">
+                                02 / DATA
+                            </div>
+
+                            <h3>Stock</h3>
+
+                            <p>
+                                A JavaScript-based project exploring
+                                financial data and interactive
+                                digital experiences.
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Data</span>
+                                <span class="tag">Finance</span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        class="project-card reveal"
+                        href="https://jayarajsjaykar.github.io/filescanner/"
+                        target="_blank"
+                    >
+
+                        <div>
+
+                            <div class="project-number">
+                                03 / SECURITY
+                            </div>
+
+                            <h3>FileScanner</h3>
+
+                            <p>
+                                A security-oriented project designed
+                                around file analysis and scanning
+                                workflows.
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Security</span>
+                                <span class="tag">Tools</span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        class="project-card reveal"
+                        href="https://railvision-1.streamlit.app/"
+                        target="_blank"
+                    >
+
+                        <div>
+
+                            <div class="project-number">
+                                04 / SAFETY
+                            </div>
+
+                            <h3>AlertEye</h3>
+
+                            <p>
+                                A technology concept focused on
+                                alerting, monitoring and improving
+                                situational awareness.
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">HTML</span>
+                                <span class="tag">Safety</span>
+                                <span class="tag">Innovation</span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        class="project-card reveal"
+                        href="https://jayarajsjaykar.github.io/sih/"
+                        target="_blank"
+                    >
+
+                        <div>
+
+                            <div class="project-number">
+                                05 / EXPERIMENT
+                            </div>
+
+                            <h3>Prototype</h3>
+
+                            <p>
+                                An experimental project space for
+                                testing ideas, interfaces and
+                                technology concepts.
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">HTML</span>
+                                <span class="tag">Prototype</span>
+                                <span class="tag">UX</span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        class="project-card reveal"
+                        href="https://jayarajsjaykar.github.io/portfolio/"
+                        target="_blank"
+                    >
+
+                        <div>
+
+                            <div class="project-number">
+                                06 / PERSONAL BRAND
+                            </div>
+
+                            <h3>Portfolio</h3>
+
+                            <p>
+                                The evolution of my digital identity,
+                                projects and technology journey.
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+                <div style="text-align:center; margin-top:40px;">
+
+                    <a
+                        href="https://github.com/jayarajsjaykar"
+                        target="_blank"
+                        class="btn btn-secondary"
+                    >
+                        View Full GitHub →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CAPABILITIES
+        ====================================================== -->
+
+        <section id="skills">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div class="section-number">
+                        04 — CAPABILITIES
+                    </div>
+
+                    <h2>
+                        What I<br>
+                        bring to the table.
+                    </h2>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <div class="skill reveal">
+
+                        <div class="skill-icon">◈</div>
+
+                        <h3>AI & ML</h3>
+
+                        <p>
+                            Building intelligent systems,
+                            automation concepts and AI-driven
+                            solutions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill reveal">
+
+                        <div class="skill-icon">⌘</div>
+
+                        <h3>Software</h3>
+
+                        <p>
+                            Designing and developing practical
+                            software products and web experiences.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill reveal">
+
+                        <div class="skill-icon">◉</div>
+
+                        <h3>Leadership</h3>
+
+                        <p>
+                            Strategy, coordination, delegation,
+                            communication and team execution.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill reveal">
+
+                        <div class="skill-icon">◇</div>
+
+                        <h3>Entrepreneurship</h3>
+
+                        <p>
+                            Exploring ideas, validating concepts
+                            and turning problems into opportunities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill reveal">
+
+                        <div class="skill-icon">△</div>
+
+                        <h3>Cybersecurity</h3>
+
+                        <p>
+                            Security-focused thinking and building
+                            tools around safer digital systems.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill reveal">
+
+                        <div class="skill-icon">↗</div>
+
+                        <h3>Innovation</h3>
+
+                        <p>
+                            Combining technology and creativity
+                            to approach problems differently.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             VISION
+        ====================================================== -->
+
+        <section id="vision" class="vision">
+
+            <div class="container reveal">
+
+                <div class="section-number">
+                    05 — VISION
+                </div>
+
+                <h2>
+                    BUILD<br>
+                    <span>WHAT MATTERS.</span>
+                </h2>
+
+                <p>
+                    My goal is to build technology that goes beyond
+                    screens and demonstrations — technology that
+                    solves real problems, enables people and creates
+                    lasting impact.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GITHUB
+        ====================================================== -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="github-box reveal">
+
+                    <div>
+
+                        <h3>
+                            Explore the code.
+                        </h3>
+
+                        <p>
+                            See the projects, experiments and
+                            technology behind the work.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="https://github.com/jayarajsjaykar"
+                        target="_blank"
+                        class="btn btn-primary"
+                    >
+                        GitHub Profile →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section id="contact" class="contact">
+
+            <div class="container reveal">
+
+                <div class="section-number">
+                    06 — CONTACT
+                </div>
+
+                <h2>
+                    Let's build<br>
+                    <span>something meaningful.</span>
+                </h2>
+
+                <p>
+                    Have an idea, project, collaboration or
+                    opportunity? Let's connect and create
+                    something valuable.
+                </p>
+
+                <div class="contact-links">
+
+                    <a
+                        href="https://github.com/jayarajsjaykar"
+                        target="_blank"
+                        class="btn btn-secondary"
+                    >
+                        GitHub
+                    </a>
+
+                    <a
+                        href="mailto:jayaraj.s260807@gmail.com"
+                        class="btn btn-secondary"
+                    >
+                        Email
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/jayaraj-s-jaykar/"
+                        target="_blank"
+                        class="btn btn-secondary"
+                    >
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="container footer-inner">
+
+            <div>
+                © <span id="year"></span>
+                Jayaraj S Jaykar. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+
+                <a
+                    href="https://github.com/jayarajsjaykar"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
+
+                <a href="#home">
+                    Back to top ↑
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         BACK TO TOP
+    ========================================================== -->
+
+    <button id="topBtn" aria-label="Back to top">
+        ↑
+    </button>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        /* =========================================================
+           MOBILE MENU
+        ========================================================= */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+
+            menuBtn.textContent =
+                navLinks.classList.contains("active")
+                    ? "×"
+                    : "☰";
+
+        });
+
+
+        /* Close menu after clicking link */
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+                menuBtn.textContent = "☰";
+
+            });
+
+        });
+
+
+        /* =========================================================
+           HEADER SCROLL EFFECT
+        ========================================================== */
+
+        const header = document.getElementById("header");
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 40) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+
+        });
+
+
+        /* =========================================================
+           TYPING EFFECT
+        ========================================================== */
+
+        const typingElement =
+            document.getElementById("typing");
+
+        const words = [
+            "AI/ML Builder",
+            "Software Creator",
+            "Innovation Builder",
+            "Problem Solver"
+        ];
+
+        let wordIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        function typeEffect() {
+
+            const currentWord = words[wordIndex];
+
+            if (!deleting) {
+
+                typingElement.textContent =
+                    currentWord.substring(0, charIndex + 1);
+
+                charIndex++;
+
+                if (charIndex === currentWord.length) {
+
+                    deleting = true;
+
+                    setTimeout(typeEffect, 1600);
+
+                    return;
+
+                }
+
+            } else {
+
+                typingElement.textContent =
+                    currentWord.substring(0, charIndex - 1);
+
+                charIndex--;
+
+                if (charIndex === 0) {
+
+                    deleting = false;
+
+                    wordIndex =
+                        (wordIndex + 1) % words.length;
+
+                }
+
+            }
+
+            setTimeout(
+                typeEffect,
+                deleting ? 45 : 85
+            );
+
+        }
+
+        typeEffect();
+
+
+        /* =========================================================
+           SCROLL REVEAL
+        ========================================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+        const revealObserver =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("visible");
+
+                            revealObserver.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+        revealElements.forEach(element => {
+
+            revealObserver.observe(element);
+
+        });
+
+
+        /* =========================================================
+           COUNTERS
+        ========================================================== */
+
+        const counters =
+            document.querySelectorAll(".stat-number[data-target]");
+
+        const counterObserver =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (!entry.isIntersecting) {
+                            return;
+                        }
+
+                        const counter = entry.target;
+
+                        const target =
+                            Number(
+                                counter.dataset.target
+                            );
+
+                        let current = 0;
+
+                        const duration = 1200;
+
+                        const start =
+                            performance.now();
+
+                        function updateCounter(timestamp) {
+
+                            const progress =
+                                Math.min(
+                                    (timestamp - start) / duration,
+                                    1
+                                );
+
+                            current =
+                                Math.floor(
+                                    progress * target
+                                );
+
+                            counter.textContent =
+                                current;
+
+                            if (progress < 1) {
+
+                                requestAnimationFrame(
+                                    updateCounter
+                                );
+
+                            } else {
+
+                                counter.textContent =
+                                    target;
+
+                            }
+
+                        }
+
+                        requestAnimationFrame(
+                            updateCounter
+                        );
+
+                        counterObserver.unobserve(counter);
+
+                    });
+
+                },
+                {
+                    threshold: 0.7
+                }
+            );
+
+
+        counters.forEach(counter => {
+
+            counterObserver.observe(counter);
+
+        });
+
+
+        /* =========================================================
+           CURSOR GLOW
+        ========================================================== */
+
+        const cursorGlow =
+            document.getElementById("cursorGlow");
+
+        document.addEventListener(
+            "mousemove",
+            event => {
+
+                cursorGlow.style.left =
+                    event.clientX + "px";
+
+                cursorGlow.style.top =
+                    event.clientY + "px";
+
+            }
+        );
+
+
+        /* =========================================================
+           BACK TO TOP
+        ========================================================== */
+
+        const topBtn =
+            document.getElementById("topBtn");
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 600) {
+
+                topBtn.classList.add("show");
+
+            } else {
+
+                topBtn.classList.remove("show");
+
+            }
+
+        });
+
+
+        topBtn.addEventListener("click", () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+
+        /* =========================================================
+           CURRENT YEAR
+        ========================================================== */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        /* =========================================================
+           SMOOTH ANCHOR HANDLING
+        ========================================================== */
+
+        document.querySelectorAll(
+            'a[href^="#"]'
+        ).forEach(anchor => {
+
+            anchor.addEventListener(
+                "click",
+                function(event) {
+
+                    const target =
+                        document.querySelector(
+                            this.getAttribute("href")
+                        );
+
+                    if (!target) return;
+
+                    event.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+                }
+            );
+
+        });
+
+    </script>
+
+</body>
+</html>
+```
